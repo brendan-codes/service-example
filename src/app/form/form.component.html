@@ -1,0 +1,8 @@
+<!-- if we want to try the other http methods, change the submit function -->
+<form (submit)="getUserAlt()" #form="ngForm">
+    <label for="username">
+      Github Username:
+      <input type="text" name='username' required [(ngModel)]="username">
+    </label>
+    <button [disabled]="form.invalid">Get User!</button>
+</form>
